@@ -20,6 +20,39 @@ class VistaSujeto: UIView {
     }
 }
 
+class VistaRoja: VistaSimple {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        backgroundColor = .red
+    }
+    func respond() {
+        label.text = "hello!"
+    }
+}
+
+class VistaAzul: VistaSimple {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        backgroundColor = .cyan
+    }
+    func respond() {
+        label.text = "hello!"
+    }
+}
+
+
+
+class VistaVerde: VistaSimple {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        backgroundColor = .green
+    }
+    func respond() {
+        label.text = "hello!"
+    }
+}
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -76,37 +109,6 @@ class ViewController: UIViewController {
     }
 }
 
-class VistaRoja: VistaSimple {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        backgroundColor = .red
-    }
-    func respond() {
-        label.text = "hello!"
-    }
-}
-
-class VistaAzul: VistaSimple {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        backgroundColor = .cyan
-    }
-    func respond() {
-        label.text = "hello!"
-    }
-}
-
-
-
-class VistaVerde: VistaSimple {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        backgroundColor = .green
-    }
-    func respond() {
-        label.text = "hello!"
-    }
-}
 
 class VistaSimple: UIView {
 

@@ -1,8 +1,8 @@
 //
 //  main.swift
-//  Protocol
+//  Typed Protocol
 //
-//  Created by Ariel Elkin on 21/02/2017.
+//  Created by Ariel Elkin on 22/02/2017.
 //  Copyright © 2017 NSConfArg. All rights reserved.
 //
 
@@ -12,19 +12,27 @@ protocol Observable {
     mutating func add(observer: Observer)
 }
 
-
 protocol Observer {
-    func receive(event: Any)
+    func receive(event: Event)
+}
+
+struct Event {
+    var string: String
 }
 
 struct Subject: Observable {
-    var observers: [Observer] = []
+
+    var observers = [Observer]()
 
     mutating func add(observer: Observer) {
         observers.append(observer)
     }
 
-    func fireEvents(event: Any) {
+    func receive(event: Event) {
+        print("Received: \(event)")
+    }
+
+    func fireEvent(event: Event) {
         for observer in observers {
             observer.receive(event: event)
         }
@@ -32,7 +40,7 @@ struct Subject: Observable {
 }
 
 struct EventReceiver: Observer {
-    func receive(event: Any) {
+    func receive(event: Event) {
         print("Received: \(event)")
     }
 }
@@ -41,7 +49,7 @@ var gen = Subject()
 let receiver = EventReceiver()
 
 gen.add(observer: receiver)
-gen.fireEvents(event: "hi!")
-gen.fireEvents(event: 42)
+gen.fireEvent(event: Event.init(string: "hello"))
+gen.fireEvent(event: Event.init(string: "hello"))
 
 

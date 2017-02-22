@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Typed Protocol/Typed Protocol.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Observador/Observador.xcodeproj">
    </FileRef>
    <FileRef
