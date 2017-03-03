@@ -43,5 +43,3 @@ let receiver = EventReceiver()
 gen.add(observer: receiver)
 gen.fireEvents(event: "hi!")
 gen.fireEvents(event: 42)
-
-

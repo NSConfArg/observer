@@ -11,6 +11,9 @@
       location = "group:Observador/../Protocol/Protocol.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:NotificationCenter/NotificationCenter.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TODO">
    </FileRef>
 </Workspace>
