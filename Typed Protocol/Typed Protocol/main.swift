@@ -54,6 +54,8 @@ struct ConcreteSubject: Subject {
     }
 }
 
+
+
 class ConcreteObserver: Observer {
 
     func receive(event: Event) {

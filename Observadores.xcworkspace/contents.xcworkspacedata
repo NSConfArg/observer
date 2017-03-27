@@ -8,13 +8,7 @@
       location = "group:Observador/Observador.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Observador/../Protocol/Protocol.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:NotificationCenter/NotificationCenter.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TODO">
    </FileRef>
    <FileRef
       location = "group:README.md">
