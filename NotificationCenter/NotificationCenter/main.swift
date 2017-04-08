@@ -11,10 +11,22 @@ import Foundation
 let notificationName = NSNotification.Name(rawValue: "name")
 
 class Observer {
+    init() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(receiveNotification(notification:)),
+            name: notificationName,
+            object: nil
+        )
+    }
+
     @objc public func receiveNotification(notification: Notification) {
         if let number = notification.userInfo?["foo"] {
             print("number: \(number)")
         }
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: notificationName, object: nil);
     }
 }
 
